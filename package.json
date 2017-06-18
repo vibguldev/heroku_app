@@ -1,0 +1,18 @@
+{
+  "name": "heroku_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "dropbox": "^2.5.4",
+    "express": "^4.15.3",
+    "jsonexport": "^2.0.9"
+  }
+}
