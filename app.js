@@ -2,7 +2,7 @@
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8080;
-
+var restify = require('restify');
 // set the view engine to ejs
 
 // make express look in the public directory for assets (css/js/img)
@@ -24,7 +24,8 @@ const bodyParser = require('body-parser')
 var jsonexport = require('jsonexport');
 var Dropbox = require('dropbox');
 var dbx = new Dropbox({ accessToken: 'lG--VGb_TW0AAAAAAAABBBgDv3Dh-uPN7pRc0uAHTPqW2Gw4XtP4-TM5KCkjlj7F'});
-
+app.use(cors());
+app.use(restify.fullResponse());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 
