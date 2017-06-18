@@ -39,10 +39,10 @@ app.post('/sendData', function (req, res) {
 
     dbx.filesUpload({ path: '/' + filename, contents: contents, mode: 'overwrite' })
         .then(function(response) {
-            console.log(response);
+            res.send("done")
         })
         .catch(function(error) {
-            console.error(error);
+            res.send(error)
         });
     });
   // req.body.forEach(function(element) {
