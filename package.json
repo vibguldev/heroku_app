@@ -13,6 +13,7 @@
     "cors": "^2.8.3",
     "dropbox": "^2.5.4",
     "express": "^4.15.3",
+    "json2csv": "^3.7.3",
     "jsonexport": "^2.0.9",
     "restify": "^4.3.0"
   }
