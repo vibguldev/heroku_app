@@ -6,7 +6,7 @@ const converter = (obj) => {
 }
 
 function convert2Csv(firebaseData) {
-    const fields = ['username', 'company', 'answer1', 'answer2', 'answer3', 'comments']
+    const fields = ['username', 'company', 'What have you observed', 'What strikes as most interesting', 'What is applicable to Unilever', 'comments']
     let jsonData = converter(firebaseData)
     return json2csv({ data: jsonData, fields: fields })
 }
