@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 const fs = require('fs')
 const bodyParser = require('body-parser')
-var jsonexport = require('jsonexport');
+const json2csv = require('json2csv');
 var Dropbox = require('dropbox');
 const convertToCsv = require('./convertToArray.js')
 var dbx = new Dropbox({ accessToken: 'lG--VGb_TW0AAAAAAAABBBgDv3Dh-uPN7pRc0uAHTPqW2Gw4XtP4-TM5KCkjlj7F'});
@@ -38,7 +38,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.post('/sendData', function (req, res) {
   const contacts = JSON.parse(Object.keys(req.body)[0])
-  const csvData = convertToCsv(contacts)
   // console.log("here : ",csvData)
   const filename = 'responses.csv'
   const csvData = convertToCsv(contacts)
